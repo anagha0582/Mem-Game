@@ -1,0 +1,121 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.game-info {
+  font-size: 40px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px;
+}
+
+.container > div {
+  border: 0.5px solid black;
+  padding: 10px;
+  font-size: 50px;
+  text-align: center;
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+  color: white;
+  width: 70px;
+  height: 70px;
+}
+
+.highlight {
+  background-color: yellow; 
+}
+
+
+
+.highlight {
+  background-color:yellow;
+}
+
+.selected {
+  background-color: lightgreen;
+}
+
+#message {
+  margin: 20px 0;
+  font-size: 1.2em;
+  min-height: 1.5em;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .game-info {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    padding: 0;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .container > div {
+    font-size: 20px;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* ensures square tiles */
+    padding: 0;
+  }
+
+  #message {
+    font-size: 1em;
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .game-info {
+    font-size: 20px;
+  }
+
+  .container > div {
+    font-size: 18px;
+  }
+
+  #message {
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .game-info {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    max-width: 500px;
+  }
+
+  .container > div {
+    font-size: 32px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    padding: 0;
+  }
+
+  #message {
+    font-size: 1em;
+  }
+}
